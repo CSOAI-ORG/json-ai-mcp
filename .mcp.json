@@ -1,0 +1,23 @@
+{
+  "name": "json-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Json tools for AI agents and LLMs",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/json-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "validate_json",
+    "transform_json",
+    "diff_json",
+    "flatten_json"
+  ],
+  "categories": [
+    "Developer Tools",
+    "Data Processing"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
