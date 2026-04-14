@@ -1,4 +1,9 @@
 """JSON AI MCP Server — JSON manipulation and validation tools."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json
 import time
 from typing import Any
@@ -18,8 +23,12 @@ def _rate_check(tool: str) -> bool:
     return True
 
 @mcp.tool()
-def validate_json(json_string: str, strict: bool = True) -> dict[str, Any]:
+def validate_json(json_string: str, strict: bool = True, api_key: str = "") -> dict[str, Any]:
     """Validate JSON and report structure details."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("validate_json"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -38,8 +47,12 @@ def validate_json(json_string: str, strict: bool = True) -> dict[str, Any]:
     return {"valid": True, "structure": analyze(data), "size_bytes": len(json_string), "pretty": json.dumps(data, indent=2)[:2000]}
 
 @mcp.tool()
-def transform_json(json_string: str, operation: str, path: str = "", value: str = "") -> dict[str, Any]:
+def transform_json(json_string: str, operation: str, path: str = "", value: str = "", api_key: str = "") -> dict[str, Any]:
     """Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("transform_json"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -99,8 +112,12 @@ def transform_json(json_string: str, operation: str, path: str = "", value: str 
     return {"operation": operation, "result": result, "original_size": len(json_string), "result_size": len(result)}
 
 @mcp.tool()
-def diff_json(json_a: str, json_b: str) -> dict[str, Any]:
+def diff_json(json_a: str, json_b: str, api_key: str = "") -> dict[str, Any]:
     """Compare two JSON objects and find differences."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("diff_json"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -135,8 +152,12 @@ def diff_json(json_a: str, json_b: str) -> dict[str, Any]:
     return {"identical": len(diffs) == 0, "differences": diffs, "diff_count": len(diffs)}
 
 @mcp.tool()
-def flatten_json(json_string: str, separator: str = ".", max_depth: int = 10) -> dict[str, Any]:
+def flatten_json(json_string: str, separator: str = ".", max_depth: int = 10, api_key: str = "") -> dict[str, Any]:
     """Flatten nested JSON to single-level with dot-notation keys."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("flatten_json"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:

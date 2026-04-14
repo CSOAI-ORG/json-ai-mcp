@@ -1,23 +1,90 @@
 {
   "name": "json-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Json tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/json-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "MCP server for JSON manipulation and validation tools.",
+  "version": "1.0.0",
   "tools": [
-    "validate_json",
-    "transform_json",
-    "diff_json",
-    "flatten_json"
-  ],
-  "categories": [
-    "Developer Tools",
-    "Data Processing"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "validate_json",
+      "description": "Validate JSON and report structure details.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "json_string": {
+            "type": "string"
+          },
+          "strict": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "json_string"
+        ]
+      }
+    },
+    {
+      "name": "transform_json",
+      "description": "Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "json_string": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "json_string",
+          "operation"
+        ]
+      }
+    },
+    {
+      "name": "diff_json",
+      "description": "Compare two JSON objects and find differences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "json_a": {
+            "type": "string"
+          },
+          "json_b": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "json_a",
+          "json_b"
+        ]
+      }
+    },
+    {
+      "name": "flatten_json",
+      "description": "Flatten nested JSON to single-level with dot-notation keys.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "json_string": {
+            "type": "string"
+          },
+          "separator": {
+            "type": "string"
+          },
+          "max_depth": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "json_string"
+        ]
+      }
+    }
+  ]
 }

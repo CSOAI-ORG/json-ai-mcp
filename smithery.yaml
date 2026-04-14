@@ -1,10 +1,50 @@
 name: json-ai-mcp
-description: "MEOK AI Labs — Json tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/json-ai-mcp
-license: MIT
-categories: [Developer Tools, Data Processing]
-tags: [json, json-processing, json-schema, data-format, json-transformation]
-runtime: python
-entrypoint: server.py
+description: MCP server for JSON manipulation and validation tools.
+version: 1.0.0
+tools:
+- name: validate_json
+  description: Validate JSON and report structure details.
+  parameters:
+  - name: json_string
+    type: string
+    required: true
+  - name: strict
+    type: boolean
+    required: false
+- name: transform_json
+  description: 'Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls,
+    add_field, remove_field, get_path.'
+  parameters:
+  - name: json_string
+    type: string
+    required: true
+  - name: operation
+    type: string
+    required: true
+  - name: path
+    type: string
+    required: false
+  - name: value
+    type: string
+    required: false
+- name: diff_json
+  description: Compare two JSON objects and find differences.
+  parameters:
+  - name: json_a
+    type: string
+    required: true
+  - name: json_b
+    type: string
+    required: true
+- name: flatten_json
+  description: Flatten nested JSON to single-level with dot-notation keys.
+  parameters:
+  - name: json_string
+    type: string
+    required: true
+  - name: separator
+    type: string
+    required: false
+  - name: max_depth
+    type: integer
+    required: false
