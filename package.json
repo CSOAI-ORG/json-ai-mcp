@@ -1,7 +1,7 @@
 {
   "name": "json-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — json MCP Server",
+  "description": "AI-powered json ai MCP server for agents. Supports validate json, transform json, diff json. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "json",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/json-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/json-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/json-ai-mcp"
+  }
 }

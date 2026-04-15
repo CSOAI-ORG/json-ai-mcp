@@ -1,6 +1,6 @@
 {
   "name": "json-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "AI-powered json ai MCP server for agents. Supports validate json, transform json, diff json. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
