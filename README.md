@@ -1,56 +1,38 @@
-# JSON AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — JSON manipulation and validation tools
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/json-ai-mcp)](https://github.com/CSOAI-ORG/json-ai-mcp/stargazers)
+
+# ujsonU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/json-ai-mcp)](https://www.npmjs.com/package/@meok-ai/json-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/json-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install json-ai-mcp
+# or
+npm install -g @meok-ai/json-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `validate_json`
-Validate JSON and report structure details including type, key count, and depth.
-
-**Parameters:**
-- `json_string` (str): JSON string to validate
-- `strict` (bool): Strict parsing mode (default: True)
-
-### `transform_json`
-Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path.
-
-**Parameters:**
-- `json_string` (str): JSON string to transform
-- `operation` (str): Transformation operation
-- `path` (str): Dot-notation path for field operations
-- `value` (str): Value for add_field operation
-
-### `diff_json`
-Compare two JSON objects and find differences including additions, removals, and changes.
-
-**Parameters:**
-- `json_a` (str): First JSON string
-- `json_b` (str): Second JSON string
-
-### `flatten_json`
-Flatten nested JSON to single-level with dot-notation keys.
-
-**Parameters:**
-- `json_string` (str): JSON string to flatten
-- `separator` (str): Key separator (default: ".")
-- `max_depth` (int): Maximum nesting depth (default: 10)
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
