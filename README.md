@@ -1,3 +1,7 @@
+[![json-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/json-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/json-ai-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/json-ai-mcp)](https://pypi.org/project/json-ai-mcp/)
+
 [![json-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/json-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/json-ai-mcp)
 
 <div align="center">
