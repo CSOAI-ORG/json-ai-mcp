@@ -52,6 +52,12 @@ def validate_json(json_string: str, strict: bool = True, api_key: str = "") -> d
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        json_string (str): The json string to analyze or process.
+        strict (bool): The strict to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -107,6 +113,14 @@ def transform_json(json_string: str, operation: str, path: str = "", value: str 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        json_string (str): The json string to analyze or process.
+        operation (str): The operation to analyze or process.
+        path (str): The path to analyze or process.
+        value (str): The value to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -203,6 +217,12 @@ def diff_json(json_a: str, json_b: str, api_key: str = "") -> dict[str, Any]:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        json_a (str): The json a to analyze or process.
+        json_b (str): The json b to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -274,6 +294,13 @@ def flatten_json(json_string: str, separator: str = ".", max_depth: int = 10, ap
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        json_string (str): The json string to analyze or process.
+        separator (str): The separator to analyze or process.
+        max_depth (int): The max depth to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
