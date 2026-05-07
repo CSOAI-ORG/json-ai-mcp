@@ -36,7 +36,23 @@ def _rate_check(tool: str) -> bool:
 
 @mcp.tool()
 def validate_json(json_string: str, strict: bool = True, api_key: str = "") -> dict[str, Any]:
-    """Validate JSON and report structure details."""
+    """Validate JSON and report structure details.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -61,7 +77,23 @@ def validate_json(json_string: str, strict: bool = True, api_key: str = "") -> d
 
 @mcp.tool()
 def transform_json(json_string: str, operation: str, path: str = "", value: str = "", api_key: str = "") -> dict[str, Any]:
-    """Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path."""
+    """Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -127,7 +159,23 @@ def transform_json(json_string: str, operation: str, path: str = "", value: str 
 
 @mcp.tool()
 def diff_json(json_a: str, json_b: str, api_key: str = "") -> dict[str, Any]:
-    """Compare two JSON objects and find differences."""
+    """Compare two JSON objects and find differences.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -168,7 +216,23 @@ def diff_json(json_a: str, json_b: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def flatten_json(json_string: str, separator: str = ".", max_depth: int = 10, api_key: str = "") -> dict[str, Any]:
-    """Flatten nested JSON to single-level with dot-notation keys."""
+    """Flatten nested JSON to single-level with dot-notation keys.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
