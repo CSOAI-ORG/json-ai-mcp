@@ -1,7 +1,6 @@
 """JSON AI MCP Server — JSON manipulation and validation tools."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json
@@ -11,6 +10,15 @@ from mcp.server.fastmcp import FastMCP
 
 from datetime import datetime, timezone
 from collections import defaultdict
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
 
 FREE_DAILY_LIMIT = 15
 _usage = defaultdict(list)
@@ -75,7 +83,7 @@ def validate_json(json_string: str, strict: bool = True, api_key: str = "") -> d
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     if not _rate_check("validate_json"):
@@ -138,7 +146,7 @@ def transform_json(json_string: str, operation: str, path: str = "", value: str 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     if not _rate_check("transform_json"):
@@ -240,7 +248,7 @@ def diff_json(json_a: str, json_b: str, api_key: str = "") -> dict[str, Any]:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     if not _rate_check("diff_json"):
@@ -318,7 +326,7 @@ def flatten_json(json_string: str, separator: str = ".", max_depth: int = 10, ap
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     if not _rate_check("flatten_json"):
@@ -345,5 +353,8 @@ def flatten_json(json_string: str, separator: str = ".", max_depth: int = 10, ap
     flatten(data)
     return {"flattened": flat, "key_count": len(flat), "separator": separator, "original_size": len(json_string)}
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
