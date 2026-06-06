@@ -1,4 +1,6 @@
-"""JSON AI MCP Server — JSON manipulation and validation tools."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+JSON AI MCP Server — JSON manipulation and validation tools."""
 
 import sys, os
 from auth_middleware import check_access
