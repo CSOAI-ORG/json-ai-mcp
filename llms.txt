@@ -1,0 +1,31 @@
+# Json Ai MCP
+
+> json-ai-mcp MCP — AI-powered automation tool
+
+`json-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install json-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx json-ai-mcp
+```
+
+## Tools
+
+- `validate_json` — Validate JSON and report structure details.
+- `transform_json` — Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path.
+- `diff_json` — Compare two JSON objects and find differences.
+- `flatten_json` — Flatten nested JSON to single-level with dot-notation keys.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/json-ai-mcp
+- PyPI: https://pypi.org/project/json-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
