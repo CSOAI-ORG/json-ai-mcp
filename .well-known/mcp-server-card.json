@@ -1,0 +1,25 @@
+{
+  "name": "json-ai-mcp",
+  "title": "Json Ai Mcp",
+  "description": "AI-powered json ai MCP server for agents. Supports validate json, transform json, diff json. By MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "validate_json"
+    },
+    {
+      "name": "transform_json"
+    },
+    {
+      "name": "diff_json"
+    },
+    {
+      "name": "flatten_json"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
 """
-Buy Pro: https://www.csoai.org/checkout
 JSON AI MCP Server — JSON manipulation and validation tools."""
 
 import sys, os

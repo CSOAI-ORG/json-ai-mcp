@@ -1,31 +1,33 @@
-# Json Ai MCP
-
-> json-ai-mcp MCP — AI-powered automation tool
-
-`json-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# json-ai-mcp
+# **JSON AI MCP Server — JSON manipulation and validation tools.**
 
 ## Install
-
 ```bash
 pip install json-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx json-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `validate_json` — Validate JSON and report structure details.
-- `transform_json` — Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path.
-- `diff_json` — Compare two JSON objects and find differences.
-- `flatten_json` — Flatten nested JSON to single-level with dot-notation keys.
+### `validate_json`
+Validate JSON and report structure details.
 
-## Links
+### `transform_json`
+Transform JSON. Operations: sort_keys, minify, prettify, remove_nulls, add_field, remove_field, get_path.
 
-- Source: https://github.com/CSOAI-ORG/json-ai-mcp
-- PyPI: https://pypi.org/project/json-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `diff_json`
+Compare two JSON objects and find differences.
+
+### `flatten_json`
+Flatten nested JSON to single-level with dot-notation keys.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

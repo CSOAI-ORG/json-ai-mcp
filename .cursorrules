@@ -1,0 +1,9 @@
+# json-ai-mcp - Auto-trigger Rules
+
+When the user asks about json, use json-ai-mcp tools: validate_json, transform_json, diff_json, flatten_json
+
+**JSON AI MCP Server — JSON manipulation and validation tools.**
+
+Install: `pip install json-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
