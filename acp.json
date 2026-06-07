@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "json-ai-mcp",
+    "description": "Json Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "json-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "validate_json",
+      "transform_json",
+      "diff_json",
+      "flatten_json"
+    ]
+  }
+}

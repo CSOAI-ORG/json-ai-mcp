@@ -1,0 +1,59 @@
+{
+  "name": "json-ai-mcp",
+  "description": "Json Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/json-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "validate_json",
+      "name": "Validate Json",
+      "description": "validate_json via json-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "transform_json",
+      "name": "Transform Json",
+      "description": "transform_json via json-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "diff_json",
+      "name": "Diff Json",
+      "description": "diff_json via json-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "flatten_json",
+      "name": "Flatten Json",
+      "description": "flatten_json via json-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
