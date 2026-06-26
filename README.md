@@ -113,3 +113,28 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "json-ai-mcp": {
+      "command": "uvx",
+      "args": ["json-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install json-ai-mcp` then run the `json-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `validate_json` to …"
+- "Use `transform_json` to …"
+- "Use `diff_json` to …"
